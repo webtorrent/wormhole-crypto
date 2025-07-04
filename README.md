@@ -1,7 +1,10 @@
-# wormhole-crypto [![ci][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+# wormhole-crypto
 
-[ci-image]: https://img.shields.io/github/workflow/status/SocketDev/wormhole-crypto/ci/master
-[ci-url]: https://github.com/SocketDev/wormhole-crypto/actions
+[![Socket Badge](https://socket.dev/api/badge/npm/package/wormhole-crypto)](https://socket.dev/npm/package/wormhole-crypto)
+[![ci][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+
+[ci-image]: https://img.shields.io/github/workflow/status/webtorrent/wormhole-crypto/ci/master
+[ci-url]: https://github.com/webtorrent/wormhole-crypto/actions
 [npm-image]: https://img.shields.io/npm/v/wormhole-crypto.svg
 [npm-url]: https://npmjs.org/package/wormhole-crypto
 [downloads-image]: https://img.shields.io/npm/dm/wormhole-crypto.svg
@@ -187,6 +190,21 @@ Returns: `Promise[ReadableStream]`
 Returns a `Promise` that resolves to a `ReadableStream` decryption stream that
 consumes the data in `encryptedStream` and returns a plaintext version.
 
+### `keychain.decryptStreamRange(offset, length, totalEncryptedLength)`
+
+Type: `Function`
+
+Returns: `Promise[{ ranges, decrypt }]`
+
+Returns a `Promise` that resolves to a object containing `ranges`, which is an array of
+objects containing `offset` and `length` integers specifying the encrypted byte ranges
+that are needed to decrypt the client's specified range, and a `decrypt` function.
+
+Once the client has gathered a stream for each byte range in `ranges`, the client
+should call `decrypt(streams)`, where `streams` is an array of `ReadableStream` objects,
+one for each of the requested ranges. `decrypt` will then return a `ReadableStream`
+containing the plaintext data for the client's desired byte range.
+
 #### `encryptedStream`
 
 Type: `ReadableStream`
@@ -247,4 +265,4 @@ Given a plaintext size, return the corresponding encrypted size.
 
 ## License
 
-MIT. Copyright (c) [Socket Inc](https://socket.dev)
+MIT. Copyright (c) [WebTorrent, LLC](https://webtorrent.io)
