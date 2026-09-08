@@ -1,10 +1,10 @@
-# wormhole-crypto 
+# wormhole-crypto
 
 [![Socket Badge](https://socket.dev/api/badge/npm/package/wormhole-crypto)](https://socket.dev/npm/package/wormhole-crypto)
 [![ci][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
-[ci-image]: https://img.shields.io/github/workflow/status/SocketDev/wormhole-crypto/ci/master
-[ci-url]: https://github.com/SocketDev/wormhole-crypto/actions
+[ci-image]: https://img.shields.io/github/workflow/status/webtorrent/wormhole-crypto/ci/master
+[ci-url]: https://github.com/webtorrent/wormhole-crypto/actions
 [npm-image]: https://img.shields.io/npm/v/wormhole-crypto.svg
 [npm-url]: https://npmjs.org/package/wormhole-crypto
 [downloads-image]: https://img.shields.io/npm/dm/wormhole-crypto.svg
@@ -265,4 +265,4 @@ Given a plaintext size, return the corresponding encrypted size.
 
 ## License
 
-MIT. Copyright (c) [Socket Inc](https://socket.dev)
+MIT. Copyright (c) [WebTorrent, LLC](https://webtorrent.io)

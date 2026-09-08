@@ -3,12 +3,12 @@
   "description": "Streaming encryption for Wormhole.app, based on Encrypted Content-Encoding for HTTP (RFC 8188)",
   "version": "0.3.1",
   "author": {
-    "name": "Socket Inc",
-    "email": "feross@socket.dev",
-    "url": "https://socket.dev"
+    "name": "WebTorrent, LLC",
+    "email": "feross@webtorrent.io",
+    "url": "https://webtorrent.io"
   },
   "bugs": {
-    "url": "https://github.com/SocketDev/wormhole-crypto/issues"
+    "url": "https://github.com/webtorrent/wormhole-crypto/issues"
   },
   "dependencies": {
     "base64-js": "^1.5.1"
@@ -39,7 +39,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/SocketDev/wormhole-crypto.git"
+    "url": "git://github.com/webtorrent/wormhole-crypto.git"
   },
   "scripts": {
     "lint": "standard",
